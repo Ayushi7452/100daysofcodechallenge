@@ -1,3 +1,4 @@
+// In this given problem we take input by the user and use String Builder to reverse the String.
 import java.io.*;
 import java.util.*;
 
