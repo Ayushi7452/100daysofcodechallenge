@@ -1,3 +1,8 @@
+// In this given problem we have create pattern using for loop
+
+//CODE-
+
+
 class HelloWorld {
     public static void main(String[] args) {
         int n=4;
