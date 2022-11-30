@@ -1,0 +1,36 @@
+//Given a string S. The task is to print all unique permutations of the given string in lexicographically sorted order.
+class Solution {
+    public List<String> find_permutation(String S) {
+        // Code here
+        List<String> result = new ArrayList<>();
+        Set<String> set = new HashSet<>();
+        permute(S, 0, S.length(), result, set);
+        Collections.sort(result);
+        return result;
+        
+    }
+    
+    void permute(String str, int index, int n, List<String> result, Set<String> set){
+        if(index == n){
+            set.add(str);
+            result.add(str);
+            return;
+        }
+        
+        for(int i = index ; i < n ; i++){
+            String s = swap(str, index , i);
+            if(set.contains(s)) continue;
+            permute(s, index+1, n, result, set);
+        }
+    }
+    
+    public String swap(String str, int i, int j){
+        StringBuilder sb = new StringBuilder(str);
+        char temp = sb.charAt(i);
+        sb.setCharAt(i, sb.charAt(j));
+        sb.setCharAt(j, temp);
+        
+        return sb.toString();
+    
+    }
+}
