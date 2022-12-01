@@ -1,0 +1,14 @@
+//Print numbers from 1 to N without the help of loops.
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+    if(N==0){
+        return;
+    }
+    printNos(N-1);
+    System.out.print(N+" ");
+    }
+}
+
