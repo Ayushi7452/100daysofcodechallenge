@@ -1,0 +1,22 @@
+//Longest increasing subarray.
+class Solution {
+    
+    public long lenOfLongIncSubArr(long arr[], long n)
+    {
+         if(arr.length==0){
+            return 0;
+        }
+        int len=1;
+        int maxlen = 1;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i-1]<arr[i]){
+                len++;
+            }
+            else{
+                len = 1;
+            }
+            maxlen = Math.max(len,maxlen);
+        }
+        return maxlen;
+    }
+}
