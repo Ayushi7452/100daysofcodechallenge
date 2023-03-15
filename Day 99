@@ -1,4 +1,5 @@
 //Wave Array.
+//In this we use the swapping concept.
 class Solution {
     public static void convertToWave(int n, int[] a) {
         // code here
